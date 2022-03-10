@@ -31,7 +31,7 @@
 				<img src="./static/img/moslogo.png" alt="profile picture" class="profpic">
 			</a>
 		</div>
-		<h1>Page 1</h1>
+		<h1>Работа с формами</h1>
 	</header>
 	<main>
 		<section class="hero" id="hero">
@@ -43,10 +43,24 @@
 					</div>
 					<img src="./static/svg/peep-8.svg" alt="mascot" class="mascot">
 				</div>
-				<form method="POST" action= "//httpbin.org/post" class="callform">
+				<form method="POST" action= "https://httpbin.org/post" class="callform">
 					<input name="name" type="text" placeholder="John Phedor" required>
 					<input name="phone" type="tel" placeholder="8 (985) 431 31 27" required>
-					<input name="anek" type="text" placeholder="Анекдот" required>
+					<input name="type" type="text" placeholder="Предмет жалобы" required>
+					<textarea rows="10" cols="45" name="text"></textarea>
+					<div class="text">
+						<input type="radio" id="contactChoice1"
+						name="contact" value="email">
+						<label for="contactChoice1">Email</label>
+
+						<input type="radio" id="contactChoice2"
+						name="contact" value="phone">
+						<label for="contactChoice2">Phone</label>
+
+						<input type="radio" id="contactChoice3"
+						name="contact" value="mail">
+						<label for="contactChoice3">SMS</label>
+					</div>
 					<button type="submit" class="but">SEND</button>
 				</form>
 				<a href="./page2.php" class="bstyle">

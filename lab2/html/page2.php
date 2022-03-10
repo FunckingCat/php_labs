@@ -31,7 +31,7 @@
 				<img src="./static/img/moslogo.png" alt="profile picture" class="profpic">
 			</a>
 		</div>
-		<h1>Page 1</h1>
+		<h1>get headers</h1>
 	</header>
 	<main>
 		<section class="hero" id="hero">
@@ -43,14 +43,16 @@
 					</div>
 					<img src="./static/svg/peep-8.svg" alt="mascot" class="mascot">
 				</div>
-				<p class="text">
+				<textarea rows="20" cols="45">
 					<?php
-						$arr = get_headers("http://httpbin.org/post");
+						$res = "";
+						$arr = get_headers("https://httpbin.org/post");
 						foreach($arr as $a){
-							echo $a, "<br>";
+							$res .= $a . "\n";
 						}
+						echo $res;
 					?>
-				</p>
+				</textarea>
 				<a href="./index.php" target="blank" class="bstyle">
 					Перейти обратно
 				</a>
